@@ -22,7 +22,7 @@ const MostrarCliente = () => {
     }
   }
 
-  /**funcion eliminiar clientes*/
+  /**funcion eliminiar clientes rama develop*/
   const eliminarClientesById = async (id) => {
     try {
       await axios.delete(`${URL}${id}`);
