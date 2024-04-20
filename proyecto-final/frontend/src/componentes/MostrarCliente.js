@@ -18,7 +18,7 @@ const MostrarCliente = () => {
       const datos = await axios.get(URL);
       setCliente(datos.data);
     } catch (error) {
-      console.log(`Error al consultar los datos en la ${URL}`)
+      console.log(`${error.message}`)
     }
   }
 
@@ -29,7 +29,7 @@ const MostrarCliente = () => {
       getClientes();
       //eslint-disable-next-line      
     } catch (error) {
-      console.log(`Error al consultar los datos en la ${URL}${id}}`)
+      console.log(`${error.message}`)
     }
   }
 
