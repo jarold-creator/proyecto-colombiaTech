@@ -4,6 +4,7 @@ import MostrarCliente from './componentes/MostrarCliente';
 import AgregarCliente from './componentes/AgregarCliente';
 import ActualizarCliente from './componentes/ActualizarCliente';
 import Menu from './componentes/Menu';
+import Footer from './componentes/Footer';
 
 //funcion principal
 function App() {
@@ -16,7 +17,8 @@ function App() {
         <Route path='/clientes/agregar' element={<AgregarCliente />} />   
         <Route path='/clientes/actualizar/:id' element={<ActualizarCliente />} />     
       </Routes>
-      </BrowserRouter>      
+      </BrowserRouter>  
+      <Footer />    
     </div>
   );
 }

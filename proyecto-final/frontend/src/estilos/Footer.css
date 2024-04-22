@@ -1,0 +1,33 @@
+.redes-sociales{
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;    
+}
+
+.contenedor-footer{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;        
+}
+
+.parrafo-redes-sociales{
+    margin-top: 15px;
+}
+
+.redes-sociales a i {
+    font-size: 30px; /* Ajusta el tamaño de los iconos según tus preferencias */
+  }
+
+.card-body{
+    width: 50%;
+    height: 80px;
+    margin-top: 5px;
+}
+  
