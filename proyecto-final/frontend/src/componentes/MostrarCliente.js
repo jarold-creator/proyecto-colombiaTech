@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import ActualizarCliente from './ActualizarCliente';
 
 const URL = 'http://localhost:5000/api/clientes/';
 
@@ -66,14 +67,15 @@ const MostrarCliente = () => {
                     <td>{cliente.direccion}</td>
                     <td>
                       <Link
-                        to={`/clientes/editar/${cliente._id}`}
-                        className='btn btn-outline-success m-1'>
+                        to={`/clientes/actualizar/${cliente._id}`}
+                        className='btn btn-outline-success m-1'
+                        onClick={() => { ActualizarCliente(cliente._id) }}>
                         <i className='fa-solid fa-pen fa-lg'></i>
                       </Link>
                       <button
                         to={`/clientes/eliminar/${cliente._id}`}
                         className='btn btn-outline-danger m-1'
-                        onClick={() => { eliminarClientesById(cliente._id)}}
+                        onClick={() => { eliminarClientesById(cliente._id) }}
                       >
                         <i className='fa-solid fa-trash-can fa-lg'></i>
                       </button>
