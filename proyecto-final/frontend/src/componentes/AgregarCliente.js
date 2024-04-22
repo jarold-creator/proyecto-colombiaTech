@@ -27,7 +27,17 @@ const AgregarCliente = () => {
         telefono: telefono,
         direccion: direccion
       })
-      navigate('/clientes')
+
+      // Limpiar los campos de entrada
+      setNombres('');
+      setApellidos('');
+      setDocumento('');
+      setCorreo('');
+      setTelefono('');
+      setDireccion('');
+
+      navigate('/clientes/agregar');
+
     } catch (error) {
       console.log(`Error al agregar los datos en la ${URL}`)
     }
