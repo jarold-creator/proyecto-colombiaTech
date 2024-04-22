@@ -3,11 +3,13 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MostrarCliente from './componentes/MostrarCliente';
 import AgregarCliente from './componentes/AgregarCliente';
 import ActualizarCliente from './componentes/ActualizarCliente';
+import Menu from './componentes/Menu';
 
 //funcion principal
 function App() {
   return (
     <div className="App">
+      <Menu />     
       <BrowserRouter>
       <Routes>
         <Route path='/clientes' element={<MostrarCliente />} />

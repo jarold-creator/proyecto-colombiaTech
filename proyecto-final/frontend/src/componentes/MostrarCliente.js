@@ -40,7 +40,7 @@ const MostrarCliente = () => {
         <div className='col'>
           <Link
             to='/clientes/agregar'
-            className='btn btn-outline-primary mt-4 mb-4'>
+            className='btn btn-outline-primary mt-4 mb-4 boton-agregar'>
             <i className="fa-solid fa-user-plus"></i>
           </Link>
           <table className='table table-bordered table-striped table-responsive table-sm align-middle'>

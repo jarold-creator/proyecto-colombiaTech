@@ -1,0 +1,14 @@
+.contenedor-menu{
+    margin: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);        
+}
+
+.nav-link:hover{
+    background-color: lightblue;    
+}
+
+span{
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}

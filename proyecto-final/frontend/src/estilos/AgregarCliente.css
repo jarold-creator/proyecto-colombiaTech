@@ -30,3 +30,7 @@
     font-size: 30px;
     font-weight: 800;
 }
+
+.boton-agregar{
+    box-shadow: 0 6px 10px rgba(56, 14, 134, 0.1);    
+}
