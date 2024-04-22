@@ -17,12 +17,17 @@
     align-items: center;        
 }
 
+.contenedor-footer:hover{
+    background-color: lightblue;
+}
+
 .parrafo-redes-sociales{
     margin-top: 15px;
 }
 
 .redes-sociales a i {
-    font-size: 30px; /* Ajusta el tamaño de los iconos según tus preferencias */
+    font-size: 30px;
+    margin: 5px;
   }
 
 .card-body{

@@ -14,7 +14,7 @@ const Footer = () => {
     }, []);
 
     return (
-        <div className="card text-center contenedor-footer">
+        <div className="container-fluid contenedor-footer">
             <div className="card-body">
                 <p>&copy; 2024 Mi Empresa. Todos los derechos reservados.</p>
                 <p>Fecha y hora actual: {currentDateTime.toLocaleString()}</p>
