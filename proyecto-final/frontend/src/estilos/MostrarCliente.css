@@ -1,0 +1,16 @@
+.input-busqueda{
+    margin: 5px;
+    width: 400px;      
+}
+
+.input-busqueda:hover{
+    background-color: lightblue;
+}
+
+.contenedor-input-busqueda{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    margin: 10px;
+}

@@ -2,12 +2,14 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import ActualizarCliente from './ActualizarCliente';
+import '../estilos/MostrarCliente.css'
 
 const URL = 'http://localhost:5000/api/clientes/';
 
 const MostrarCliente = () => {
 
   const [clientes, setCliente] = useState([]);
+  const [searchText, setSearchText] = useState('');
 
   useEffect(() => {
     getClientes()
@@ -34,15 +36,36 @@ const MostrarCliente = () => {
     }
   }
 
+  const filteredClientes = clientes.filter(cliente => {
+    return (
+      cliente.nombres.toLowerCase().includes(searchText.toLowerCase()) ||
+      cliente.apellidos.toLowerCase().includes(searchText.toLowerCase()) ||
+      (typeof cliente.documento === 'string' && cliente.documento.toLowerCase().includes(searchText.toLowerCase())) ||
+      cliente.correo.toLowerCase().includes(searchText.toLowerCase()) ||
+      (typeof cliente.telefono === 'string' && cliente.telefono.toLowerCase().includes(searchText.toLowerCase())) ||
+      cliente.direccion.toLowerCase().includes(searchText.toLowerCase())
+    );
+  });
+  
+  
   return (
     <div className='contenedor'>
       <div className='row'>
         <div className='col'>
+          <div className='contenedor-input-busqueda'>
+        <input
+            type="text"
+            className='form-control-sm input-busqueda'
+            placeholder="Buscar..."
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+          />
           <Link
             to='/clientes/agregar'
             className='btn btn-outline-primary mt-4 mb-4 boton-agregar'>
             <i className="fa-solid fa-user-plus"></i>
           </Link>
+          </div>
           <table className='table table-bordered table-striped table-responsive table-sm align-middle'>
             <thead className='thead-dark'>
               <tr>
@@ -56,7 +79,7 @@ const MostrarCliente = () => {
               </tr>
             </thead>
             <tbody>
-              {clientes.map((cliente, index) => {
+              {filteredClientes.map((cliente, index) => {
                 return (
                   <tr key={index}>
                     <td>{cliente.nombres}</td>
