@@ -24,6 +24,7 @@
 .tarjeta p {
   color: #333;
   font-size: 16px;
+  text-align: justify;
 }
 
 .tarjeta img {
