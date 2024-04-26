@@ -3,12 +3,19 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);        
 }
 
-.nav-link:hover{
-    background-color: lightblue;    
-}
-
-span{
-    font-size: 18px;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
+/* Estilos para los enlaces Link */
+.nav-item {
+    margin-right: 10px; /* Espacio entre elementos del menú */
+  }
+  
+  .nav-item a {
+    text-decoration: none; /* Quitar subrayado del texto del enlace */
+    color: #333; /* Color del texto del enlace */
+    font-weight: bold; /* Fuente en negrita */
+    transition: color 0.3s ease; /* Transición suave del color al pasar el mouse */
+  }
+  
+  .nav-item a:hover {
+    color: #007bff; /* Cambiar color al pasar el mouse sobre el enlace */
+  }
+  
