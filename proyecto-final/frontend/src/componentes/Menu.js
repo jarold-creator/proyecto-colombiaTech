@@ -1,7 +1,15 @@
 import '../estilos/Menu.css';
+import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 const Menu = () => {
+
+  const location = useLocation();
+  if (location.pathname === '/') {
+    return null;
+  }
+
+
   return (
     <div className='contenedor-menu'>
       <ul className="nav nav-tabs justify-content-center">
