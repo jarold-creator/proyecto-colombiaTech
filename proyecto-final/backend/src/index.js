@@ -14,7 +14,8 @@ app.use(cors());
 app.use(express.json());
 
 /**rutas web */
-app.use('/api/clientes', require('../routers/rutas'));
+app.use('/api/clientes', require('../routers/rutasCliente'));
+app.use('/api/productos', require('../routers/rutasProducto'))
 
 
 /**definir ruta principal */

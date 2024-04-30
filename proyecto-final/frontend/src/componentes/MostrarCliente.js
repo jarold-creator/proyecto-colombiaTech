@@ -37,15 +37,18 @@ const MostrarCliente = () => {
   }
 
   const filteredClientes = clientes.filter(cliente => {
-    return (
-      cliente.nombres.toLowerCase().includes(searchText.toLowerCase()) ||
-      cliente.apellidos.toLowerCase().includes(searchText.toLowerCase()) ||
-      (typeof cliente.documento === 'string' && cliente.documento.toLowerCase().includes(searchText.toLowerCase())) ||
-      cliente.correo.toLowerCase().includes(searchText.toLowerCase()) ||
-      (typeof cliente.telefono === 'string' && cliente.telefono.toLowerCase().includes(searchText.toLowerCase())) ||
-      cliente.direccion.toLowerCase().includes(searchText.toLowerCase())
-    );
+    const nombresValidos = cliente.nombres && typeof cliente.nombres === 'string' && cliente.nombres.toLowerCase().includes(searchText.toLowerCase());
+    const apellidosValidos = cliente.apellidos && typeof cliente.apellidos === 'string' && cliente.apellidos.toLowerCase().includes(searchText.toLowerCase());
+    const documentoValido = cliente.documento && typeof cliente.documento === 'string' && cliente.documento.toLowerCase().includes(searchText.toLowerCase());
+    const telefonoValido = cliente.telefono && typeof cliente.telefono === 'string' && cliente.telefono.toLowerCase().includes(searchText.toLowerCase());
+    
+    // Verificar al menos uno de los criterios de búsqueda
+    return nombresValidos || apellidosValidos || documentoValido || telefonoValido ||
+           (cliente.correo && typeof cliente.correo === 'string' && cliente.correo.toLowerCase().includes(searchText.toLowerCase())) ||
+           (cliente.direccion && typeof cliente.direccion === 'string' && cliente.direccion.toLowerCase().includes(searchText.toLowerCase()));
   });
+  
+  
   
   
   return (
