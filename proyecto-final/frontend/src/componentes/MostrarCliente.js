@@ -95,8 +95,9 @@ const MostrarCliente = () => {
                       <Link
                         to={`/clientes/actualizar/${cliente._id}`}
                         className='btn btn-outline-success m-1'
-                        onClick={() => { ActualizarCliente(cliente._id) }}>
-                        <i className='fa-solid fa-pen fa-lg'></i>
+                        onClick={() => { ActualizarCliente(cliente._id) }}
+                      >
+                        <i className='fa-solid fa-pen fa-lg border'></i>
                       </Link>
                       <button
                         to={`/clientes/eliminar/${cliente._id}`}

@@ -9,7 +9,7 @@ import ActualizarProducto from '../componentes/ActualizarProducto';
 import AgregarProducto from '../componentes/AgregarProducto';
 
 
-const RutasPage = ({ showFooter }) => {
+const RutasPage = () => {
   return (
     <Routes>
       <Route path='/' element={<FormLogin />} />
